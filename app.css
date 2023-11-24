@@ -212,14 +212,29 @@ main{
 .setup-guide .main-guide{
     margin-top: 16px;
     width: 100%;
-    /* height: 0px;
-    overflow: hidden; */
+    height: 0px;
+    overflow: hidden;
+    transition: all 500ms ease-in-out;
+}
+
+.setup-guide .main-guide.show-guides{
+    height: auto;
 }
 
 .setup-guide .main-guide .each-guide{
     width: 100%;
     margin-bottom: 8px;
     cursor: pointer;
+    padding-top: 8px;
+    height: 32px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* This is where you channge the active class for each guide */
+.setup-guide .main-guide .each-guide.active{
+    background-color: #F3F3F3;
+    height: auto;
 }
 
 .setup-guide .main-guide .each-guide .guide-title{
@@ -292,11 +307,14 @@ main{
     width: auto;
 }
 
+
 .setup-guide .main-guide .each-guide .guide-info .img-container .blur{
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
     height: 25%;
-    background: linear-gradient(to bottom, rgba(255,255,255, 1), rgba(255, 255, 255, 0.6));
+    background-color: #F3F3F3;
+    box-shadow: 0 -3px 5px #F3F3F3;
 }
+
