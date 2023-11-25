@@ -17,9 +17,9 @@
             <input type="text" placeholder="Search">
         </section>
         <section class="notification-user">
-            <div class="notification-btn">
+            <div class="notification-btn" id="notify">
                 <img src="./assets/bell.svg" alt="Notification Bell Icon">
-                <div class="notification-menu">
+                <div class="notification-menu" id="notify-menu">
                     <div class="heading">
                         <h3>Alerts</h3>
                         <div class="icons">
@@ -32,12 +32,12 @@
                     </div>
                 </div>
             </div>
-            <div class="user">
+            <div class="user"  id="user">
                 <p class="name">Davii Collections</p>
                 <div class="user-short">
                     <p>DC</p>
                 </div>
-                <div class="menu-bar">
+                <div class="menu-bar" id="user-menu">
                     <div class="top">
                         <div class="name">
                             <div class="left-side">
@@ -76,14 +76,14 @@
     </header>
     <main>
         <section class="main-box">
-            <section class="trial-alert">
+            <section class="trial-alert" id="alert">
                 <div class="text">
                     <p>Extend your trial for $1/month for 3 months on select plans.</p>
                     <!-- <button>Label</button> -->
                 </div>   
                 <div class="select-plan">
                     <a href="https://www.shopify.com/pricing"><button>Select a plan</button></a>
-                    <img src="./assets/close.svg" alt="Close icon">
+                    <img src="./assets/close.svg" alt="Close icon" id="close-alert">
                 </div>             
             </section>
             <section class="setup-guide">
@@ -93,17 +93,17 @@
                             <h2>Setup guide</h2>
                             <p>Use this personalized guide to get your store up and running</p>
                         </div>
-                        <img src="./assets/angleup.svg" alt="Dropdown Icon">
+                        <img src="./assets/angledown.svg" alt="Dropdown Icon" id="drop-menu">
                     </section>
                     <section class="complete-bar">
-                        <p>1/5 completed</p>
+                        <p id="bar-complete">0/5 completed</p>
                         <div class="bar">
-                            <div class="inner-bar"></div>
+                            <div class="inner-bar" id="black-bar"></div>
                         </div>
                     </section>
                 </section>
-                <section class="main-guide">
-                    <section class="each-guide active">
+                <section class="main-guide" id="guides">
+                    <section class="each-guide active-guide">
                         <div class="guide-title">
                             <img src="./assets/check.svg" alt="Complete checkbox for the guide">
                             <p>Customize your online store</p>
@@ -198,5 +198,6 @@
             </section>
         </section>
     </main>
+    <script src="./app.js"></script>
 </body>
 </html>
