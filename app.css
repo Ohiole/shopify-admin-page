@@ -38,6 +38,7 @@ header .logo  .mobile-logo{
     width: 400px;
     height: 32px;
     transition: all 300ms ease;
+    cursor: text;
 }
 
 .search-bar input{
@@ -52,8 +53,8 @@ header .logo  .mobile-logo{
     border: 1px solid #E1E1E1;
 }
 
-.search-bar:focus{
-    border: 1px solid #FFF;
+.search-bar:active, .search-bar:focus{
+    border: 2px solid #FFF;
 }
 
 .notification-user{
@@ -72,6 +73,11 @@ header .logo  .mobile-logo{
     justify-content: center;
     cursor: pointer;
     position: relative;
+    transition: all 200ms ease-in-out;
+}
+
+.notification-user .notification-btn:hover{
+    background-color: #616161;
 }
 
 .notification-user .notification-btn .notification-menu{
@@ -151,6 +157,19 @@ header .logo  .mobile-logo{
     gap: 8px;
     border-radius: 8px;
     cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+.notification-user .user:hover{
+    background-color: #616161;
+}
+
+.notification-user .user:active{
+    background-color: #656266;
+}
+
+.notification-user .user:focus{
+    border: 2px solid #005BD3;
 }
 
 .notification-user .user .name{
@@ -232,12 +251,28 @@ header .logo  .mobile-logo{
     font-weight: 600;
 }
 
+
+
 .notification-user .user .menu-bar .top .house-label{
     display: flex;
     align-items: center;
     gap: 8px;
     margin-top: 4px;
     padding: 6px;
+    border-radius: 6px;
+    transition: all 300ms ease-in-out;
+}
+
+.notification-user .user .menu-bar .top .house-label:hover{
+    background-color: #F1F1F1;
+}
+
+.notification-user .user .menu-bar .top .house-label:active{
+    background-color: #F0F0F0;
+}
+
+.notification-user .user .menu-bar .top .house-label:focus{
+    border: 2px solid #005BD3;
 }
 
 .notification-user .user .menu-bar .top .house-label a{
@@ -273,6 +308,10 @@ header .logo  .mobile-logo{
 }
 
 .notification-user .user .menu-bar .nav-links ul li:hover, .notification-user .user .menu-bar .email-side ul li:hover{
+    background-color: #F1F1F1;
+}
+
+.notification-user .user .menu-bar .nav-links ul li:active, .notification-user .user .menu-bar .email-side ul li:active{
     border: 2px solid #005BD3;
 }
 
@@ -347,6 +386,21 @@ main{
     font-size: 12px;
     font-weight: 600;
     cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+.trial-alert .text a button:hover ,.trial-alert .select-plan a button:hover{
+    background-color: #F7F7F7;
+    box-shadow: 0px -1px 0px 0px #B5B5B5 inset;
+}
+
+.trial-alert .text a button:active ,.trial-alert .select-plan a button:active{
+    background-color: #F7F7F7;
+    box-shadow: 0px 2px 1.5px 0px #E2E2E2 inset;
+}
+
+.trial-alert .text a button:focus ,.trial-alert .select-plan a button:focus{
+    box-shadow: 0px 0px 0px 3px #005BD3, 0px 0px 0px 1px #FFF, 0px -1px 0px 0px #B5B5B5 inset;
 }
 
 .trial-alert .select-plan img{
@@ -389,11 +443,21 @@ main{
 .setup-guide .setup-head .main-text img{
     cursor: pointer;
     transition: all 200ms ease-in-out;
+    border-radius: 6px;
+}
+
+.setup-guide .setup-head .main-text img:hover{
+    background-color: #F1F1F1;
 }
 
 .setup-guide .setup-head .main-text img.open{
     transform: rotate(180deg);
 }
+
+.setup-guide .setup-head .main-text img:focus{
+    border: 1px solid #005BD3;
+}
+
 
 .setup-guide .setup-head .complete-bar{
     margin-top: 16px;
@@ -504,6 +568,25 @@ main{
     color: #F6F3F6;
     background-color: #404040;
     box-shadow: 0px 0px 0px 1.5px #333, 0px 1px 0px 1.5px #333, 0px 2px 0px 0px #000;
+    transition: all 200ms ease-in-out;
+}
+
+.setup-guide .main-guide .each-guide .guide-info .guide-text .buttons .main-btn:hover{
+    background-color: #2A2A2A;
+}
+
+.setup-guide .main-guide .each-guide .guide-info .guide-text .buttons .main-btn:active{
+    background-color: #2B2B2B;
+    box-shadow: 0px 0px 0px 1.5px #333, 0px 3px 0px 0px #000 inset;
+}
+
+.setup-guide .main-guide .each-guide .guide-info .guide-text .buttons .main-btn:focus{
+    box-shadow: 0px 0px 0px 5px #005BD3, 0px 0px 0px 3px #FFF, 0px 0px 0px 1.5px #333;
+    border-radius: 6px;
+    border-top: 1.5px solid rgba(255, 255, 255, 0.20);
+    border-right: 1.5px solid rgba(255, 255, 255, 0.20);
+    border-left: 1.5px solid rgba(255, 255, 255, 0.20);
+    background: #404040;
 }
 
 .setup-guide .main-guide .each-guide .guide-info .guide-text .buttons .import-btn{
@@ -512,10 +595,24 @@ main{
     color: rgba(50, 50, 50, 1);
     background: transparent;
     border: none;
+    border-radius: 6px;
     outline: none;
     width: 125px;
     height: 30px;
     cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+.setup-guide .main-guide .each-guide .guide-info .guide-text .buttons .import-btn:hover{
+    background-color: #E7E7E7;
+}
+
+.setup-guide .main-guide .each-guide .guide-info .guide-text .buttons .import-btn:active{
+    background-color: #E0E0E0;
+}
+
+.setup-guide .main-guide .each-guide .guide-info .guide-text .buttons .import-btn:focus{
+    border: 2px solid #005BD3;
 }
 
 .setup-guide .main-guide .each-guide .guide-info .img-container{

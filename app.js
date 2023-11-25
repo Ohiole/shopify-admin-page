@@ -43,6 +43,7 @@ closeAlertBtn.addEventListener('click', () => {
 dropGuides.addEventListener('click', () => {
 
     allGuides.classList.toggle('active');
+    dropGuides.classList.toggle('open')
 })
 
 // Toggling between guides
