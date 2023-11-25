@@ -19,6 +19,11 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 8px;
+}
+
+header .logo  .mobile-logo{
+  display: none;       
 }
 
 .search-bar{
@@ -174,6 +179,7 @@ header{
     right: 0;
     top: -500px;
     background-color: #FFF;
+    z-index: 30;
     border-radius: 14px;
     border: 1px solid #DBDBDB;
     opacity: 0;
@@ -311,6 +317,7 @@ main{
     padding: 12px 16px;
     display: flex;
     align-items: center;
+    gap: 8px;
     justify-content: space-between;
     border-radius: 8px;
 }
@@ -320,13 +327,17 @@ main{
     font-size: 13px;
 }
 
+.trial-alert .text a{
+    display: none;
+}
+
 .trial-alert .select-plan{
     display: flex;
     gap: 8px;
     align-items: center;
 }
 
-.trial-alert .select-plan a button{
+.trial-alert .text a button ,.trial-alert .select-plan a button{
     width: 100px;
     height: 28px;
     background-color: #FFF;
@@ -419,12 +430,17 @@ main{
     transition: 400ms;
 }
 
+.setup-guide .main-guide.active{
+    height: auto;
+}
+
 .setup-guide .main-guide .each-guide{
     width: 100%;
     margin-bottom: 8px;
     cursor: pointer;
     padding-top: 8px;
     padding-left: 8px;
+    padding-bottom: 16px;
     height: 32px;
     overflow: hidden;
     border-radius: 10px;
@@ -434,7 +450,7 @@ main{
 /* This is where you change the active class for each guide */
 .setup-guide .main-guide .each-guide.active-guide{
     background-color: #F3F3F3;
-    height: 150px;
+    height: auto;
 }
 
 .setup-guide .main-guide .each-guide .guide-title{
@@ -519,6 +535,83 @@ main{
 }
 
 @media screen and (max-width: 720px){
+    header .logo  .mobile-logo{
+        display: block;
+    }
     
+    header .logo .desktop-logo{
+        display: none;
+    }
 }
 
+@media screen and (max-width: 650px){
+    .notification-user .notification-btn{
+        background-color: transparent;
+    }
+    .notification-user .notification-btn .notification-menu{
+        right: 0;
+    }
+    .notification-user .user{
+        background-color: transparent;
+        padding: 0;
+    }
+    .notification-user .user .name{
+        display: none;
+    }
+
+    
+    .main-box{
+        margin-top: 24px;
+        width: 100%;
+    }
+    .trial-alert{
+        border-radius: 0;
+    }
+
+    .setup-guide{
+        border-radius: 0;
+    }
+    .setup-guide .setup-head .main-text{
+        align-items: flex-start;
+    }
+    .setup-guide .main-guide .each-guide .guide-info .guide-text{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .notification-user .notification-btn .notification-menu{
+        right: unset;
+        left: -300px;
+        width: 360px;
+    }
+
+    .trial-alert{
+        align-items: flex-start;
+    }
+
+    .trial-alert .text a{
+        display: block;
+        margin-top: 10px;
+    }
+
+    .trial-alert .select-plan a{
+        display: none;
+    }
+
+    .setup-guide .main-guide .each-guide .guide-info .guide-text{
+        width: 100%;
+    }
+
+    .setup-guide .main-guide .each-guide .guide-info .img-container{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 395px){
+    .notification-user .notification-btn .notification-menu{
+        width: 250px;
+        right: 0;
+        left: unset;
+    }
+}

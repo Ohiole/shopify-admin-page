@@ -42,13 +42,7 @@ closeAlertBtn.addEventListener('click', () => {
 // Expanding the guides 
 dropGuides.addEventListener('click', () => {
 
-    if (allGuides.clientHeight === 0) {
-        allGuides.style.height = allGuides.scrollHeight + 'px';
-        dropGuides.classList.add('open')
-    } else{
-        allGuides.style.height = '0px';
-        dropGuides.classList.remove('open')
-    }
+    allGuides.classList.toggle('active');
 })
 
 // Toggling between guides
